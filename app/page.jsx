@@ -18,7 +18,7 @@ const Page = () => {
                             src={'/assets/phoneIcon.png'}
                             alt={'phone'}
                             fill
-                            className={`${hoveredPhone ? 'opacity-0' : 'opacity-100'}`}
+                            className={`${hoveredPhone ? 'opacity-0' : 'opacity-100'} transition-all duration-400`}
                             onMouseEnter={() => setHoveredPhone(true)}
                             onMouseLeave={() => setHoveredPhone(null)}
                         />
@@ -30,7 +30,7 @@ const Page = () => {
                             alt={'phone'}
                             width={140}
                             height={140}
-                            className={`absolute ${hoveredPhone ? 'opacity-100' : 'opacity-0'}`}
+                            className={`absolute ${hoveredPhone ? 'opacity-100' : 'opacity-0'} transition-all duration-400`}
                             onMouseEnter={() => setHoveredPhone(true)}
                             onMouseLeave={() => setHoveredPhone(null)}
                         />
@@ -41,7 +41,7 @@ const Page = () => {
                             alt={'phone'}
                             width={110}
                             height={110}
-                            className={`${hoveredFlower ? 'opacity-0' : 'opacity-100'}`}
+                            className={`${hoveredFlower ? 'opacity-0' : 'opacity-100'} transition-all duration-400`}
                             onMouseEnter={() => setHoveredFlower(true)}
                             onMouseLeave={() => setHoveredFlower(null)}
                         />
@@ -52,7 +52,7 @@ const Page = () => {
                             alt={'phone'}
                             width={130}
                             height={130}
-                            className={`${hoveredFlower ? 'opacity-100' : 'opacity-0'}`}
+                            className={`${hoveredFlower ? 'opacity-100' : 'opacity-0'} transition-all duration-400`}
                             onMouseEnter={() => setHoveredFlower(true)}
                             onMouseLeave={() => setHoveredFlower(null)}
                         />
