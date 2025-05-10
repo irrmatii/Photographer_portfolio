@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+*{
+    box-sizing: border-box;
+}
+
+html body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F1EB;
+    font-family: "Cormorant Infant", serif;
+    color: #0D53BA;
+}
+
+.montserrat {
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.bg_radial{
+    background-image: conic-gradient(from 100deg, rgba(93, 135, 224, 0.76), rgba(242, 140, 165, 0.76), rgba(232, 168, 124, 0.76), rgba(93, 135, 224, 0.76));
+}
+
+.test{
+    color: dimgray;
+}
+
+.test2{
+    color: #ecd6eb;
+}
+
+
+@media screen and (min-width: 1300px)  {
+    .custom-container {
+        margin-inline: 10%;
+    }
+}
