@@ -100,12 +100,12 @@ const Nav = () => {
                 className={`sm:hidden flex justify-center w-full h-screen absolute bg-[#F4F1EB] ${mobileNavOpen ? 'top-15 transition-all duration-500 ease-in-out z-40' : '-top-250 md:-top-200 transition-all duration-500 ease-in-out'}`}>
                 <ul className="flex flex-col items-center gap-5 pt-20">
                     <Link href={'/'}
-                          className='montserrat hover:text-gray-700 hover:scale-105 transition-all duration-200 inline-block font-medium text-lg xl:text-xl'>
+                          className='montserrat hover:text-gray-700 hover:scale-105 transition-all duration-200 inline-block font-medium text-2xl'>
                         About
                     </Link>
 
                     <div
-                        className='w-full items-center montserrat font-medium text-lg xl:text-lg flex flex-col gap-4 relative'>
+                        className='w-full items-center montserrat font-medium text-2xl flex flex-col gap-4 relative'>
                         <div className='flex items-center gap-5 ml-10 hover:text-gray-700 hover:scale-105 transition-all duration-200 '>
                             Work
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" onClick={() => setHoveredItem(!hoveredItem)} className='fill-[#0D53BA]  hover:fill-gray-700'>
@@ -117,19 +117,19 @@ const Nav = () => {
                         <div className={`w-full ${hoveredItem ? 'flex items-center justify-center' : 'hidden'}`}>
                             <ul className='flex flex-col items-center justify-center gap-2 '>
                                 <Link href={'/'}
-                                      className='montserrat hover:text-gray-700 hover:scale-105 transition-all duration-200 inline-block font-medium text-md xl:text-lg relative'>
+                                      className='montserrat hover:text-gray-700 hover:scale-105 transition-all duration-200 inline-block font-medium text-xl relative'>
                                     Lemon Spring
                                 </Link>
                                 <Link href={'#'}
-                                      className='montserrat hover:text-gray-700 hover:scale-105 transition-all duration-200 inline-block font-medium text-md xl:text-lg relative'>
+                                      className='montserrat hover:text-gray-700 hover:scale-105 transition-all duration-200 inline-block font-medium text-xl relative'>
                                     Dreamscape Serenity
                                 </Link>
                                 <Link href={'/'}
-                                      className='montserrat hover:text-gray-700 hover:scale-105 transition-all duration-200 inline-block font-medium text-md xl:text-lg relative'>
+                                      className='montserrat hover:text-gray-700 hover:scale-105 transition-all duration-200 inline-block font-medium text-xl relative'>
                                     Vibrance Unveiled
                                 </Link>
                                 <Link href={'/'}
-                                      className='montserrat hover:text-gray-700 hover:scale-105 transition-all duration-200 inline-block font-medium text-md xl:text-lg relative'>
+                                      className='montserrat hover:text-gray-700 hover:scale-105 transition-all duration-200 inline-block font-medium text-xl relative'>
                                     Retro Radiance
                                 </Link>
                             </ul>
@@ -137,7 +137,7 @@ const Nav = () => {
                     </div>
 
                     <Link href={'/'}
-                          className='montserrat hover:text-gray-700 hover:scale-105 transition-all duration-200 inline-block font-medium text-lg xl:text-xl'>
+                          className='montserrat hover:text-gray-700 hover:scale-105 transition-all duration-200 inline-block font-medium text-2xl'>
                         Contact
                     </Link>
                 </ul>
