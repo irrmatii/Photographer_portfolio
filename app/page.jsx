@@ -241,26 +241,26 @@ const Page = () => {
                                         name="name"
                                         placeholder="Your Name"
                                         required
-                                        className="pl-2 border-b-2 border-[#0D53BA] font-medium text-[clamp(30px,1.6vw,40px)]  placeholder-[#ef5b2b]"
+                                        className="pl-2 border-b-2 border-[#0D53BA] font-medium text-[clamp(25px,1.6vw,40px)]  placeholder-[#ef5b2b]"
                                     />
                                     <input
                                         type="email"
                                         name="email"
                                         placeholder="Your Email"
                                         required
-                                        className="pl-2 border-b-2 border-[#0D53BA] font-medium text-[clamp(30px,1.6vw,40px)]  placeholder-[#ef5b2b]"
+                                        className="pl-2 border-b-2 border-[#0D53BA] font-medium text-[clamp(25px,1.6vw,40px)]  placeholder-[#ef5b2b]"
                                     />
                                     <textarea
                                         name="message"
                                         placeholder="Your Message"
                                         required
-                                        className="p-2 border-b-2 border-[#0D53BA] h-40 font-medium text-[clamp(30px,1.6vw,40px)] resize-none overflow-y-auto hideScrollContainer bg-[rgba(255,255,255,0.2)] placeholder-[#ef5b2b]"
+                                        className="p-2 border-b-2 border-[#0D53BA] h-40 font-medium text-[clamp(25px,1.6vw,40px)] resize-none overflow-y-auto hideScrollContainer bg-[rgba(255,255,255,0.2)] placeholder-[#ef5b2b]"
                                     />
                                 </div>
 
                                 <button
                                     type="submit"
-                                    className="w-[90%] text-[clamp(15px,2vw,30px)] border font-bold border-[#ef5b2b] rounded-full px-3 min-w-[80px] hover:bg-[rgba(239,91,43,0.75)] transition-color duration-500 ease-in-out"
+                                    className="w-[90%] text-[clamp(25px,1.6vw,30px)] border font-bold border-[#ef5b2b] rounded-full px-3 min-w-[80px] hover:bg-[rgba(239,91,43,0.75)] transition-color duration-500 ease-in-out"
                                 >
                                     Send Message
                                 </button>
@@ -269,9 +269,9 @@ const Page = () => {
                     </div>
 
                     <div className="flex-1 flex md:flex-col py-7 md:py-0 items-center justify-center gap-20">
-                        <h1 className='text-[clamp(15px,3vw,45px)]'>Instagram</h1>
-                        <h1 className='text-[clamp(15px,3vw,45px)]'>Twitter</h1>
-                        <h1 className='text-[clamp(15px,3vw,45px)]'>TikTok</h1>
+                        <h1 className='text-[clamp(20px,3vw,45px)]'>Instagram</h1>
+                        <h1 className='text-[clamp(20px,3vw,45px)]'>Twitter</h1>
+                        <h1 className='text-[clamp(20px,3vw,45px)]'>TikTok</h1>
                     </div>
                 </div>
             </section>
