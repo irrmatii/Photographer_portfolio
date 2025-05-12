@@ -1,11 +1,35 @@
+'use client'
 import React from 'react';
 import Form from "@components/Form";
 import Image from "@node_modules/next/image";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 const LemonSpringPage = () => {
+
+    const isMediumScreen = useMediaQuery("(min-width: 768px)");
+
+    useGSAP(() =>{
+        if (isMediumScreen) {
+            ScrollTrigger.create({
+                trigger: '.triggerImg',
+                start: "-10.5% top",
+                endTrigger: ".gsapCon",
+                end: "bottom bottom",
+                pin: true,
+            })
+        }
+    }, [isMediumScreen])
+
+
     return (
         <div className='w-full min-h-screen'>
-            <section className='w-full min-h-screen pt-20'>
+            <section className='w-full min-h-screen pt-40'>
                 <div className='custom-container'>
                     <div className='w-full text-center mb-15 md:mb-28 flex flex-col items-center gap-3'>
                         <h1 className='text-[clamp(40px,4.5vw,75px)]'>Lemon Spring</h1>
@@ -19,8 +43,8 @@ const LemonSpringPage = () => {
 
                     </div>
 
-                    <div className='w-full flex flex-col md:flex-row min-h-screen bg-[#585c3f]'>
-                        <div className='md:flex-1 h-[90vh] w-full relative'>
+                    <div className='w-full flex flex-col md:flex-row min-h-screen bg-[#585c3f] gsapCon'>
+                        <div className='w-full md:w-[50%] h-[90vh] relative triggerImg'>
                             <Image
                                 src={'/assets/lemon/pantelis-geo-tmJ0YKuWT_I-unsplash.jpg'}
                                 alt={'lemon spring'}
@@ -28,8 +52,8 @@ const LemonSpringPage = () => {
                                 className='object-cover'
                             />
                         </div>
-                        <div className='flex-1 flex flex-col gap-20 py-40 px-5 md:px-0'>
-                            <div className='w-full h-[90vh] relative'>
+                        <div className='w-full md:w-[50%] flex flex-col items-center justify-center gap-20 py-40 px-5 md:px-0'>
+                            <div className='w-full h-[70vh] md:h-[90vh] relative flex items-center justify-center'>
                                 <Image
                                     src={'/assets/lemon/pexels-darien-johnson-1791828-13802937.jpg'}
                                     alt={'lemon spring'}
@@ -37,7 +61,7 @@ const LemonSpringPage = () => {
                                     className='object-contain'
                                 />
                             </div>
-                            <div className='w-full h-[90vh] relative'>
+                            <div className='w-full h-[70vh] md:h-[90vh] relative'>
                                 <Image
                                     src={'/assets/lemon/pexels-ron-lach-10508274.jpg'}
                                     alt={'lemon spring'}
@@ -45,7 +69,7 @@ const LemonSpringPage = () => {
                                     className='object-contain'
                                 />
                             </div>
-                            <div className='w-full h-[90vh] relative'>
+                            <div className='w-full h-[70vh] md:h-[90vh] relative'>
                                 <Image
                                     src={'/assets/lemon/pexels-vlada-karpovich-8451973.jpg'}
                                     alt={'lemon spring'}
@@ -67,7 +91,7 @@ const LemonSpringPage = () => {
                         </div>
                     </div>
 
-                    <div className='w-full flex flex-col md:flex-row'>
+                    <div className='w-full flex flex-col items-center md:flex-row bg-[#585c3f]'>
                         <div className='relative'>
                             <Image
                                 src={'/assets/lemon/pexels-matheusnatan-3683585.jpg'}
