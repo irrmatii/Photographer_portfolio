@@ -31,11 +31,6 @@ const Profile = ({title, description, button, className}) => {
         });
     })
 
-    const splitText = (text) => {
-        return text.split("").map((char, index) => (
-            <span key={index} className="char inline-block">{char}</span>
-        ));
-    };
 
 
     return (
@@ -49,9 +44,9 @@ const Profile = ({title, description, button, className}) => {
                             <div
                                 className='w-[8%] max-w-[60px] min-w-[25px] aspect-square rounded-full bg-[#ef5b2b]'></div>
                             <div className='text-[clamp(25px,2vw,50px)] leading-tight mb-4 flex flex-col gap-4 font-medium'>
-                                {description.split('\n\n').map((paragraph, index) => (
-                                    <p key={index} className='gsap'>
-                                        {splitText(paragraph)}
+                                {description.split('<br>').map((text, index) => (
+                                    <p key={index} className="gsap">
+                                        {text.trim()}
                                     </p>
                                 ))}
                             </div>
