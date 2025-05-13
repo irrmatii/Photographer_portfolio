@@ -3,7 +3,12 @@ import Nav from "@components/Nav";
 
 export const metadata = {
     title: 'Jasper Lane',
-    description: 'Jasper Lane Visual Storyteller & Photographer'
+    description: 'Jasper Lane Visual Storyteller & Photographer',
+    icons: {
+        icon: '/favicon.svg',
+        shortcut: '/favicon.svg',
+        apple: '/favicon.svg',
+    },
 }
 
 
