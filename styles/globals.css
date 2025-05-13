@@ -22,6 +22,16 @@ html body{
     background-image: conic-gradient(from 100deg, rgba(93, 135, 224, 0.76), rgba(242, 140, 165, 0.76), rgba(232, 168, 124, 0.76), rgba(93, 135, 224, 0.76));
 }
 
+@keyframes anim1 {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 100%
+    }
+}
+
+
 
 @media screen and (min-width: 1300px)  {
     .custom-container {

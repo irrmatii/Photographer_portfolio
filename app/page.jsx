@@ -22,7 +22,7 @@ const Page = () => {
             <section className='w-full h-screen flex items-center justify-center md:justify-start mb-[100px]'>
                 <div className='custom-container px-3 text-center md:pl-25 md:text-left relative '>
                     <div>
-                        <h1 className='text-[clamp(60px,10vw,150px)] leading-tight font-light gsap'>Jasper Lane <br/> Visual
+                        <h1 className='text-[clamp(60px,10vw,150px)] leading-tight font-light animate-[anim1_700ms_ease-in]'>Jasper Lane <br/> Visual
                             Storyteller <br/> & Photographer</h1>
                     </div>
                     <div className='w-[15%] aspect-square absolute top-5 right-0 md:right-[10%]'>
