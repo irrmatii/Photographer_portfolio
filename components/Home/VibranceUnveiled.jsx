@@ -15,7 +15,7 @@ const VibranceUnveiled = () => {
                         className='object-cover object-center -z-10'
                     />
                     <div
-                        className='h-[55%] lg:h-[80%] w-[80%] lg:w-[60%] py-3 flex flex-col items-center justify-center gap-5 lg:gap-15 z-10 bg-[#849399] rounded-md'>
+                        className='h-[70%] lg:h-[80%] w-[80%] lg:w-[60%] py-3 flex flex-col items-center justify-center gap-5 lg:gap-15 z-10 bg-[#849399] rounded-md'>
                         <div
                             className='px-10 xl:px-20 w-full max-w-[580px] text-center flex items-center justify-center'>
                             <h1 className='text-[clamp(50px,4.5vw,80px)] leading-tight text-gray-50 font-light gsap'>Vibrance

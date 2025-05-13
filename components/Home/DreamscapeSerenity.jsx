@@ -3,7 +3,7 @@ import Link from "@node_modules/next/link";
 
 const DreamscapeSerenity = () => {
     return (
-        <section className="w-full h-screen relative overflow-hidden bg-fixed bg-center bg-cover flex items-center justify-center"
+        <section className="w-full h-screen relative overflow-hidden md:bg-fixed bg-center bg-cover flex items-center justify-center"
                  style={{ backgroundImage: "url('/assets/clouds/pexels-ron-lach-8262597.jpg')" }}>
             <div className='h-full flex flex-col gap-15 justify-end xl:justify-center'>
                 <div className='px-10 xl:px-20 w-full max-w-[580px] text-center'>

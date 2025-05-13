@@ -22,14 +22,6 @@ html body{
     background-image: conic-gradient(from 100deg, rgba(93, 135, 224, 0.76), rgba(242, 140, 165, 0.76), rgba(232, 168, 124, 0.76), rgba(93, 135, 224, 0.76));
 }
 
-.test{
-    color: dimgray;
-}
-
-.test2{
-    color: #ffffff;
-}
-
 
 @media screen and (min-width: 1300px)  {
     .custom-container {
