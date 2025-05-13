@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import Image from "next/image";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import LemonSpring from "@components/Home/lemonSpring";
+import LemonSpring from "@components/Home/LemonSpring";
 import DreamscapeSerenity from "@components/Home/DreamscapeSerenity";
 import VibranceUnveiled from "@components/Home/VibranceUnveiled";
 import RetroRadiance from "@components/Home/RetroRadiance";
