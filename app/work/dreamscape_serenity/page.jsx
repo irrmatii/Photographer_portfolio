@@ -7,8 +7,9 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {SplitText} from "gsap/SplitText";
 
-gsap.registerPlugin(useGSAP,ScrollTrigger);
+gsap.registerPlugin(useGSAP,ScrollTrigger, SplitText);
 
 const DreamscapeSerenityPage = () => {
 
@@ -24,6 +25,26 @@ const DreamscapeSerenityPage = () => {
                 pin: true,
             })
         }
+
+        let gsapElement = document.querySelectorAll(".gsap")
+
+        gsapElement.forEach((g) => {
+            const split = SplitText.create(g, {
+                type: 'words, lines'
+            });
+
+            gsap.from(split.lines, {
+                y: 100,
+                autoAlpha: 0,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: g,
+                    start: "top 85%",
+                    end: "bottom 40%"
+                }
+            });
+        });
+
     }, [isMediumScreen])
 
 
@@ -32,17 +53,14 @@ const DreamscapeSerenityPage = () => {
         <div className='w-full min-h-screen'>
             <section className='w-full min-h-screen pt-40 mb-[100px]'>
                 <div className='custom-container'>
-                    <div className='w-full text-center mb-15 md:mb-28 flex flex-col items-center gap-3'>
-                        <h1 className='text-[clamp(40px,4.5vw,75px)]'>Dreamscape Serenity</h1>
+                    <div className='w-full text-center mb-15 md:mb-28 flex flex-col items-center gap-8'>
+                        <h1 className='text-[clamp(40px,4.5vw,75px)] gsap'>Dreamscape Serenity</h1>
                         <div
                             className='w-[6%] max-w-[45px] min-w-[20px] aspect-square rounded-full bg-[#ef5b2b]'>
 
                         </div>
                         <div className='px-4 md:px-40 lg:px-68'>
-                            <p className='text-[clamp(25px,2vw,50px)] leading-tight'>Drift
-                                away in a celestial embrace where
-                                soft clouds
-                                cradle beauty, and serenity feels infinite</p>
+                            <p className='text-[clamp(25px,2vw,50px)] leading-tight gsap'>A serene escape above the clouds—soft light, gentle mists, and endless skies. This collection captures calm moments where everything feels peaceful and infinite.</p>
                         </div>
                     </div>
 

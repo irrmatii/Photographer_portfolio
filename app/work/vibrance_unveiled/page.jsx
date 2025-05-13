@@ -7,8 +7,9 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {SplitText} from "gsap/SplitText";
 
-gsap.registerPlugin(useGSAP,ScrollTrigger);
+gsap.registerPlugin(useGSAP,ScrollTrigger, SplitText);
 
 const VibranceUnveiledPage = () => {
 
@@ -24,6 +25,26 @@ const VibranceUnveiledPage = () => {
                 pin: true,
             })
         }
+
+        let gsapElement = document.querySelectorAll(".gsap")
+
+        gsapElement.forEach((g) => {
+            const split = SplitText.create(g, {
+                type: 'words, lines'
+            });
+
+            gsap.from(split.lines, {
+                y: 100,
+                autoAlpha: 0,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: g,
+                    start: "top 85%",
+                    end: "bottom 40%"
+                }
+            });
+        });
+
     }, [isMediumScreen])
 
 
@@ -31,15 +52,14 @@ const VibranceUnveiledPage = () => {
         <div className='w-full min-h-screen'>
             <section className='w-full min-h-screen pt-40 mb-[100px]'>
                 <div className='custom-container'>
-                    <div className='w-full text-center mb-15 md:mb-28 flex flex-col items-center gap-3'>
-                        <h1 className='text-[clamp(40px,4.5vw,75px)]'>Vibrance Unveiled</h1>
+                    <div className='w-full text-center mb-15 md:mb-28 flex flex-col items-center gap-8'>
+                        <h1 className='text-[clamp(40px,4.5vw,75px)] gsap'>Vibrance Unveiled</h1>
                         <div
                             className='w-[6%] max-w-[45px] min-w-[20px] aspect-square rounded-full bg-[#ef5b2b]'>
 
                         </div>
                         <div className='px-4 md:px-40 lg:px-68'>
-                            <p className='text-[clamp(25px,2vw,50px)] leading-tight'>Bold
-                                hues, tailored brilliance where color meets confidence in every frame.</p>
+                            <p className='text-[clamp(25px,2vw,50px)] leading-tight gsap'>Bold, sophisticated costumes burst with color, turning every frame into a statement of style and confidence. Each shot radiates elegance, where striking hues meet timeless class. </p>
                         </div>
                     </div>
 

@@ -9,17 +9,22 @@ import RetroRadiance from "@components/Home/RetroRadiance";
 import Form from "@components/Form";
 import Profile from "@components/Profile";
 
+
 const Page = () => {
 
     const [hoveredPhone, setHoveredPhone] = useState(null)
     const [hoveredFlower, setHoveredFlower] = useState(null)
     const isMediumScreen = useMediaQuery("(min-width: 768px)");
 
+
     return (
         <div className='w-full h-full'>
             <section className='w-full h-screen flex items-center justify-center md:justify-start mb-[100px]'>
                 <div className='custom-container px-3 text-center md:pl-25 md:text-left relative '>
-                    <h1 className='text-[clamp(60px,10vw,150px)] leading-tight font-light'>Jasper Lane <br/> Visual Storyteller <br/> & Photographer</h1>
+                    <div>
+                        <h1 className='text-[clamp(60px,10vw,150px)] leading-tight font-light gsap'>Jasper Lane <br/> Visual
+                            Storyteller <br/> & Photographer</h1>
+                    </div>
                     <div className='w-[15%] aspect-square absolute top-5 right-0 md:right-[10%]'>
                         <Image
                             src={'/assets/phoneIcon.png'}
@@ -75,8 +80,8 @@ const Page = () => {
             />
 
             <section className='w-full min-h-screen mb-[100px] flex flex-col'>
-                <div className='text-center mb-15 md:mb-28'>
-                    <h1 className='text-[clamp(40px,4.5vw,75px)]'>My Projects</h1>
+                <div className='text-center pt-15 md:pt-0 mb-15 md:mb-28 gsapCon'>
+                    <h1 className='text-[clamp(40px,4.5vw,75px)] gsap'>My Projects</h1>
                 </div>
                 <div className='w-full min-h-screen flex flex-col gap-20 md:gap-0'>
                     <LemonSpring/>

@@ -3,6 +3,7 @@ import Profile from "@components/Profile";
 import Form from "@components/Form";
 
 const AboutMe = () => {
+
     return (
         <div className='w-full h-full'>
             <Profile

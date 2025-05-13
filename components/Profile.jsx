@@ -1,11 +1,41 @@
-"use client";
-
+"use client"
 import React from 'react';
 import Button from "@components/Button";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {SplitText} from "gsap/SplitText";
+
+gsap.registerPlugin(useGSAP,ScrollTrigger, SplitText);
 
 const Profile = ({title, description, button, className}) => {
-    const paragraphs = description.split('\n\n');
 
+    useGSAP(() => {
+        let gsapElement = document.querySelectorAll(".gsap")
+
+        gsapElement.forEach((g) => {
+            const split = SplitText.create(g, {
+                type: 'words, lines'
+            });
+
+            gsap.from(split.lines, {
+                y: 100,
+                autoAlpha: 0,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: g,
+                    start: "top 85%",
+                    end: "bottom 40%"
+                }
+            });
+        });
+    })
+
+    const splitText = (text) => {
+        return text.split("").map((char, index) => (
+            <span key={index} className="char inline-block">{char}</span>
+        ));
+    };
 
 
     return (
@@ -15,12 +45,14 @@ const Profile = ({title, description, button, className}) => {
                     <div
                         className='w-[90%] max-w-[1100px] min-h-[80%] md:min-h-[65%] bg-[#F4F1EB] flex flex-col items-center pt-20 pb-10'>
                         <div className='text-center w-[80%] flex flex-col items-center gap-7'>
-                            <h1 className='text-[clamp(40px,4.5vw,75px)] leading-tight'>{title}</h1>
+                            <h1 className='text-[clamp(40px,4.5vw,75px)] leading-tight gsap'>{title}</h1>
                             <div
                                 className='w-[8%] max-w-[60px] min-w-[25px] aspect-square rounded-full bg-[#ef5b2b]'></div>
                             <div className='text-[clamp(25px,2vw,50px)] leading-tight mb-4 flex flex-col gap-4 font-medium'>
-                                {paragraphs.map((paragraph, index) => (
-                                    <p key={index}>{paragraph}</p>
+                                {description.split('\n\n').map((paragraph, index) => (
+                                    <p key={index} className='gsap'>
+                                        {splitText(paragraph)}
+                                    </p>
                                 ))}
                             </div>
 

@@ -7,8 +7,9 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {SplitText} from "gsap/SplitText";
 
-gsap.registerPlugin(useGSAP,ScrollTrigger);
+gsap.registerPlugin(useGSAP,ScrollTrigger, SplitText);
 
 const RetroRadiancePage = () => {
 
@@ -24,6 +25,26 @@ const RetroRadiancePage = () => {
                 pin: true,
             })
         }
+
+        let gsapElement = document.querySelectorAll(".gsap")
+
+        gsapElement.forEach((g) => {
+            const split = SplitText.create(g, {
+                type: 'words, lines'
+            });
+
+            gsap.from(split.lines, {
+                y: 100,
+                autoAlpha: 0,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: g,
+                    start: "top 85%",
+                    end: "bottom 40%",
+                }
+            });
+        });
+
     }, [isMediumScreen])
 
 
@@ -32,15 +53,14 @@ const RetroRadiancePage = () => {
         <div className='w-full min-h-screen'>
             <section className='w-full min-h-screen pt-40 mb-[100px]'>
                 <div className='custom-container'>
-                    <div className='w-full text-center mb-15 md:mb-28 flex flex-col items-center gap-3'>
-                        <h1 className='text-[clamp(40px,4.5vw,75px)]'>Retro Radiance</h1>
+                    <div className='w-full text-center mb-15 md:mb-28 flex flex-col items-center gap-8'>
+                        <h1 className='text-[clamp(40px,4.5vw,75px)] gsap'>Retro Radiance</h1>
                         <div
                             className='w-[6%] max-w-[45px] min-w-[20px] aspect-square rounded-full bg-[#ef5b2b]'>
 
                         </div>
                         <div className='px-4 md:px-40 lg:px-68'>
-                            <p className='text-[clamp(25px,2vw,50px)] leading-tight'>Glistening
-                                lights, bold beats—where vintage flair meets disco dazzle.</p>
+                            <p className='text-[clamp(25px,2vw,50px)] leading-tight gsap'>A celebration of classic glamour—shimmering disco balls, radiant sparkles, and timeless style. This collection captures the essence of retro elegance with a touch of dazzling magic.</p>
                         </div>
                     </div>
 
@@ -55,7 +75,7 @@ const RetroRadiancePage = () => {
                         </div>
                         <div
                             className='w-full md:w-[50%] flex flex-col items-center justify-center gap-20 py-40 px-5'>
-                            <div className='w-full h-[90vh] relative flex items-center justify-center'>
+                            <div className='w-full h-[90vh] relative'>
                                 <Image
                                     src={'/assets/disco/pexels-koolshooters-6983026.jpg'}
                                     alt={'lemon spring'}
